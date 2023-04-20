@@ -7,7 +7,7 @@ export default function Overview() {
   const duration = `${Math.floor(runtime / 60)}:${runtime % 60}`;
 
   return (
-    <main>
+    <main className="overview">
       <h1 className="overview__title">{title}</h1>
       <div className="overview__main-content">
         <div className="overview__image-div">

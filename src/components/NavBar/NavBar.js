@@ -1,11 +1,12 @@
+import "./NavBar.scss";
 import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
-	return (
-		<header className="NavBar">
-			<NavLink to="/">
-				<h2>Movie App</h2>
-			</NavLink>
-		</header>
-	);
+  return (
+    <header className="nav-bar">
+      <NavLink to="/">
+        <h2 class="nav-bar__logo">MOVIE APP</h2>
+      </NavLink>
+    </header>
+  );
 }

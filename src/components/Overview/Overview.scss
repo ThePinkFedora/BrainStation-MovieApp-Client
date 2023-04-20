@@ -1,4 +1,12 @@
 .overview {
+  background-color: white;
+
+  &__title {
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
   &__details {
     background-color: #222;
     color: white;

@@ -1,17 +1,16 @@
-.movie-list{
-    
-    
-    &__list{
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-    }
-   
-    &__item{
-        width: 33%;
-     
-    }
+.movie-list {
+  &__title {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
 
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-
+  &__item {
+    width: 33%;
+  }
 }
