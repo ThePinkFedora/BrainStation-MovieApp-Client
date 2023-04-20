@@ -1,18 +1,21 @@
 import MovieCard from "../MovieCard/MovieCard";
+import "./WatchList.scss";
 
-export default function WatchList({ movieList, watchlist}){
- const watchMovieList = movieList.filter((movie)=>watchlist.includes(movie.id));
+export default function WatchList({ movieList, watchlist }) {
+  const watchMovieList = movieList.filter((movie) => watchlist.includes(movie.id + ""));
 
-console.log({watchlist, watchMovieList})
-    return(
-    <main>
-    <h1>Watch List</h1>
+  console.log({ watchlist, watchMovieList });
+  return (
+    <main className="watch-list">
+      <h1 className="watch-list__title">Watch List</h1>
       <ul className="watch-list__list">
         {watchMovieList.map((movie) => (
-         <li className="movie-list__item" key={movie.id} > <MovieCard  movie={movie} /></li>
+          <li className="watch-list__item" key={movie.id}>
+            {" "}
+            <MovieCard movie={movie} />
+          </li>
         ))}
       </ul>
- 
     </main>
-    )
-};
+  );
+}

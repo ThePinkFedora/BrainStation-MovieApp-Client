@@ -1,0 +1,23 @@
+.watch-list {
+  padding: 0.5rem;
+
+  &__title {
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  &__list {
+    margin: auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 45%;
+    margin: 1rem;
+  }
+}

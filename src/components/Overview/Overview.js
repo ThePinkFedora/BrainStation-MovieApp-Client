@@ -53,7 +53,7 @@ export default function Overview({ onAddToWatchlist, onRemoveFromWatchlist, watc
             <IconButton
               iconUrl={watchlistIcon}
               alt="watchhlist"
-              content={isInWatchlist ? "Add To Watchlist" : "Remove from watchlist"}
+              content={!isInWatchlist ? "Add To Watchlist" : "Remove from watchlist"}
               onClick={handleWatchlistClick}
             />
           </div>
