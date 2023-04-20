@@ -1,7 +1,5 @@
 import "./MovieList.scss";
 import MovieCard from "../MovieCard/MovieCard";
-import axios from 'axios';
-import {useState, useEffect}from "react";
 
 export default function MovieList({movieList}) {
  
