@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["MovieList.scss"],"names":[],"mappings":"AAGI;EACI;EACA;EACA;;AAGJ;EACI","sourcesContent":[".movie-list{\n    \n    \n    &__list{\n        list-style-type: none;\n        display: flex;\n        flex-wrap: wrap;\n    }\n   \n    &__item{\n        width: 33%;\n     \n    }\n\n\n\n}"]}
