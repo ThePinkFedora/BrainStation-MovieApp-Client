@@ -19,6 +19,7 @@ export default function Overview({ onAddToWatchlist, onRemoveFromWatchlist, watc
     });
   }, []);
   if (!movieDetails) {
+    document.title = `MOVIE APP: Overview - Loading...`;
     return <div> Loading...</div>;
   }
 
@@ -29,11 +30,11 @@ export default function Overview({ onAddToWatchlist, onRemoveFromWatchlist, watc
   const isInWatchlist = watchlist.includes(id);
 
   const handleWatchlistClick = () => {
-    console.log("Watchlist click");
     if (!isInWatchlist) onAddToWatchlist(id);
     else onRemoveFromWatchlist(id);
   };
-  console.log("is in watchlist: " + isInWatchlist);
+
+  document.title = `MOVIE APP: ${title}`;
 
   return (
     <main className="overview">

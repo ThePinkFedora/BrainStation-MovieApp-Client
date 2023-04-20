@@ -4,7 +4,8 @@ import "./WatchList.scss";
 export default function WatchList({ movieList, watchlist }) {
   const watchMovieList = movieList.filter((movie) => watchlist.includes(movie.id + ""));
 
-  console.log({ watchlist, watchMovieList });
+  document.title = `MOVIE APP: Watchlist`;
+
   return (
     <main className="watch-list">
       <h1 className="watch-list__title">Watch List</h1>
