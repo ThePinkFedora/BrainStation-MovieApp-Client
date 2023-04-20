@@ -1,28 +1,47 @@
-.overview{
+.overview {
+  &__details {
+    background-color: #222;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
 
-    &__details{
-        display:flex;
-        justify-content: space-between;
-    }
-    &__image{
-        width: 75%;
-        height: 50%;  
-    }
-    &__image-div{
-        display:flex;
-        justify-content: center;
-    }
-&__genre{
-    background-color: gray;
-}
-&__date{
-    background-color: aqua;
-}
-&__runtime{
-    background-color: cadetblue;
-}
-&__vote{
-    background-color: burlywood;
-}
+  &__main-content {
+    display: flex;
+  }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__genre {
+    // background-color: gray;
+  }
+  &__date {
+    // background-color: aqua;
+  }
+  &__runtime {
+    // background-color: cadetblue;
+  }
+  &__vote {
+    // background-color: burlywood;
+  }
+
+  &__overview {
+    padding: 1rem;
+    flex: 100%;
+  }
+
+  &__image-div {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    width: 50%;
+    // width: 50%;
+    // height: 50%;
+  }
 }
