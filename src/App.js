@@ -31,7 +31,10 @@ function App() {
 
   //Download watchlist from API
   useEffect(() => {
-    axios.get("http://localhost:8080/watchlist/").then((res) => setWatchlist(res.data));
+    axios
+      .get("http://localhost:8080/watchlist/")
+      .then((res) => setWatchlist(res.data))
+      .catch((error) => alert("An unexpected error occurred. Couldn't retrieve watchlist."));
   }, []);
 
   if (!movieList) {
@@ -40,9 +43,12 @@ function App() {
 
   const handleAddToWatchlist = (movieId) => {
     //POST id to watchlist on API
-    axios.post("http://localhost:8080/watchlist/", { id: movieId }).then((res) => {
-      setWatchlist(res.data);
-    });
+    axios
+      .post("http://localhost:8080/watchlist/", { id: movieId })
+      .then((res) => {
+        setWatchlist(res.data);
+      })
+      .catch((error) => alert("An unexpected error occurred. Couldn't add item to watchlist."));
 
     //Update watchlist state
     // setWatchlist([...watchhlist, movieId]);
@@ -50,9 +56,12 @@ function App() {
   const handleRemoveFromWatchlist = (movieId) => {
     // setWatchlist(watchhlist.filter((id) => id !== movieId));
     //DELETE id from watchlist on API
-    axios.delete(`http://localhost:8080/watchlist/${movieId}`).then((res) => {
-      setWatchlist(res.data);
-    });
+    axios
+      .delete(`http://localhost:8080/watchlist/${movieId}`)
+      .then((res) => {
+        setWatchlist(res.data);
+      })
+      .catch((error) => alert("An unexpected error occurred. Couldn't remove item from watchlist."));
   };
 
   return (
