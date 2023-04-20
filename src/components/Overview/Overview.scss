@@ -1,0 +1,28 @@
+.overview{
+
+    &__details{
+        display:flex;
+        justify-content: space-between;
+    }
+    &__image{
+        width: 75%;
+        height: 50%;  
+    }
+    &__image-div{
+        display:flex;
+        justify-content: center;
+    }
+&__genre{
+    background-color: gray;
+}
+&__date{
+    background-color: aqua;
+}
+&__runtime{
+    background-color: cadetblue;
+}
+&__vote{
+    background-color: burlywood;
+}
+
+}
