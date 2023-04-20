@@ -1,6 +1,11 @@
 .watch-list {
   padding: 0.5rem;
 
+  &__content {
+    margin: auto;
+    max-width: 75rem;
+  }
+
   &__title {
     width: 100%;
     color: white;

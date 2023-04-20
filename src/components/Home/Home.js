@@ -6,7 +6,9 @@ export default function Home({ movieList, watchlist }) {
 
   return (
     <main className="home">
-      <MovieList movieList={movieList} watchlist={watchlist} />
+      <div className="home__content">
+        <MovieList movieList={movieList} watchlist={watchlist} />
+      </div>
     </main>
   );
 }
