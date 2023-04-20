@@ -22,6 +22,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    box-shadow: inset 1px 2px 20px rgba(0, 0, 0, 0.5);
   }
 
   &__genre {
@@ -42,10 +43,18 @@
     flex: 100%;
   }
 
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.25rem 0.5rem;
+  }
+
   &__image-div {
     background-color: #444;
     display: flex;
     justify-content: center;
+
+    box-shadow: inset 1px 2px 20px rgba(0, 0, 0, 0.5);
   }
   &__image {
     width: 50%;
