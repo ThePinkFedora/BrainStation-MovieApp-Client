@@ -1,13 +1,28 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Overview from "./components/Overview/Overview";
+import WatchList from "./components/WatchList/WatchList";
+import axios from "axios";
 
 function App() {
+
+  const [movieList, setMovieList]=useState(null);
   const [watchhlist, setWatchlist] = useState([]);
+  useEffect(()=>{
+    axios.get('https://api.themoviedb.org/3/discover/movie?api_key=18738ecfafb89b9dc502473373a38d50')
+    .then((res)=>{
+    setMovieList(res.data.results)
+    })
+  }, []);
+
+  if(!movieList){
+    return <div>Loading...</div>
+  }
+ 
 
   const handleAddToWatchlist = (movieId) => {
     setWatchlist([...watchhlist, movieId]);
@@ -20,11 +35,12 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home movieList={movieList}/>} />
         <Route
           path="/:id"
           element={<Overview onAddToWatchlist={handleAddToWatchlist} onRemoveFromWatchlist={handleRemoveFromWatchlist} watchlist={watchhlist} />}
         />
+        <Route path="/watchlist" element ={<WatchList movieList = {movieList} watchlist={watchhlist}/>} />
       </Routes>
     </BrowserRouter>
   );

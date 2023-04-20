@@ -1,10 +1,10 @@
 import "./Home.scss";
 import MovieList from "../MovieList/MovieList";
 
-export default function Home() {
+export default function Home({movieList}) {
   return (
     <main className="home">
-      <MovieList />
+      <MovieList movieList={movieList}/>
     </main>
   );
 }

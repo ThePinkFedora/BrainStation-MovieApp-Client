@@ -1,8 +1,0 @@
-.movie-list__list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-.movie-list__item {
-  width: 33%;
-}/*# sourceMappingURL=MovieList.css.map */
