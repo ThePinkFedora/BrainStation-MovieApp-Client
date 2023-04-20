@@ -57,7 +57,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar watchlistCount={watchhlist.length} />
       <Routes>
         <Route path="/" element={<Home movieList={movieList} />} />
         <Route
