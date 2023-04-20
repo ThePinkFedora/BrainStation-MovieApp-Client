@@ -1,8 +1,13 @@
 .nav-bar {
+  background-image: url('../../images/popcorn.svg');
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position-y: 30%;
   background-color: gold;
   padding: 0.25rem 1rem;
 
   &__logo {
+    padding-left: 2.5rem;
     color: #251607;
     font-size: 2rem;
 
@@ -10,4 +15,9 @@
       text-decoration: underline;
     }
   }
+  
+  &__link{
+    padding-left: 2.5rem;
+   }
+
 }
