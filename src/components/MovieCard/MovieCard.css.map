@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["MovieCard.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;AACA;EACE;;AAEF;EACE","sourcesContent":[".movie-card {\n  border: 1px solid black;\n  display: flex;\n  margin: 0.5rem;\n  border-radius: 0.25rem;\n  &__thumbnail {\n    width: 5rem;\n  }\n  &__content {\n    padding-left: 0.5rem;\n  }\n}\n"]}
