@@ -10,7 +10,7 @@ import axios from "axios";
 
 function App() {
   const [movieList, setMovieList] = useState(null);
-  const [watchhlist, setWatchlist] = useState([]);
+  const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
     axios.get("https://api.themoviedb.org/3/discover/movie?api_key=18738ecfafb89b9dc502473373a38d50").then((res) => {
@@ -66,14 +66,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar watchlistCount={watchhlist.length} />
+      <NavBar watchlistCount={watchlist.length} />
       <Routes>
-        <Route path="/" element={<Home movieList={movieList} />} />
+        <Route path="/" element={<Home movieList={movieList} watchlist={watchlist} />} />
         <Route
           path="/:id"
-          element={<Overview onAddToWatchlist={handleAddToWatchlist} onRemoveFromWatchlist={handleRemoveFromWatchlist} watchlist={watchhlist} />}
+          element={<Overview onAddToWatchlist={handleAddToWatchlist} onRemoveFromWatchlist={handleRemoveFromWatchlist} watchlist={watchlist} />}
         />
-        <Route path="/watchlist" element={<WatchList movieList={movieList} watchlist={watchhlist} />} />
+        <Route path="/watchlist" element={<WatchList movieList={movieList} watchlist={watchlist} />} />
       </Routes>
     </BrowserRouter>
   );
