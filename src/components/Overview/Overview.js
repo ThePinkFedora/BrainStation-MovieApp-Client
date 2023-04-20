@@ -59,7 +59,7 @@ export default function Overview({ onAddToWatchlist, onRemoveFromWatchlist, watc
             />
           </div>
           <div className="overview__details">
-            <div className="overview__vote">Rating: {vote_average}</div>
+            <div className="overview__vote">Rating: {vote_average.toFixed(1)}</div>
             <div className="overview__genre">Genre: {genres[0].name}</div>
           </div>
         </div>
